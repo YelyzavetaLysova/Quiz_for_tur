@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking Trail App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="app-screen" id="home-screen" data-screen-name="Hjemskjerm">
+            <div class="header">
+                <h2>Trail Tale</h2>
+            </div>
+            <div class="content">
+                <h3>Hey family!</h3>
+                <div class="level-badge">
+                    <div class="level-display">
+                        <h4>Level</h4>
+                        <div class="level-number">8</div>
+                    </div>
+                    <div class="badge-progress">
+                        <p>Last badge and next badge</p>
+                        <div class="badge-icons">
+                            <div class="badge-icon">
+                                <i class="fas fa-star"></i>
+                                <span class="badge-name">Nature Detective</span>
+                            </div>
+                            <div class="badge-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="badge-icon">
+                                <i class="fas fa-star"></i>
+                                <span class="badge-name">Trail Master</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-hike">
+                    <h4>Your next hike?</h4>
+                    <div class="hike-options">
+                        <div class="hike-option">
+                            <div class="hike-icon"><i class="fas fa-tree"></i></div>
+                            <div class="hike-details">
+                                <h5>Enchanted Forest Loop</h5>
+                                <div class="hike-meta">
+                                    <span class="difficulty">Medium</span>
+                                    <span class="duration">45 min</span>
+                                </div>
+                            </div>
+                            <div class="hike-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                        <div class="hike-option">
+                            <div class="hike-icon"><i class="fas fa-water"></i></div>
+                            <div class="hike-details">
+                                <h5>Riverside Discovery</h5>
+                                <div class="hike-meta">
+                                    <span class="difficulty">Easy</span>
+                                    <span class="duration">30 min</span>
+                                </div>
+                            </div>
+                            <div class="hike-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                        <div class="hike-option">
+                            <div class="hike-icon"><i class="fas fa-mountain"></i></div>
+                            <div class="hike-details">
+                                <h5>Mountain View Trail</h5>
+                                <div class="hike-meta">
+                                    <span class="difficulty">Hard</span>
+                                    <span class="duration">90 min</span>
+                                </div>
+                            </div>
+                            <div class="hike-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button active"><i class="fas fa-home"></i></button>
+                <button class="nav-button"><i class="fas fa-map"></i></button>
+                <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-medal"></i></button>
+                <button class="nav-button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        
+        <div class="app-screen" id="map-screen" data-screen-name="Kart/AR-skjerm">
+            <div class="header">
+                <h2>Map</h2>
+            </div>
+            <div class="content">
+                <div class="map-container">
+                    <div class="map-image">
+                        <div class="map-mountains">
+                            <div class="mountain-icon"></div>
+                        </div>
+                        <div class="map-forest">
+                            <div class="tree-icon"></div>
+                            <div class="tree-icon"></div>
+                            <div class="tree-icon"></div>
+                        </div>
+                    </div>
+                    <div class="map-trail"></div>
+                    <div class="map-marker" style="top: 30%; left: 30%;">
+                        <div class="marker-circle purple"></div>
+                        <div class="rating">4.8<i class="fas fa-star"></i></div>
+                    </div>
+                    <div class="map-marker" style="top: 40%; left: 40%;">
+                        <div class="marker-circle blue"></div>
+                        <div class="rating">4.6<i class="fas fa-star"></i></div>
+                    </div>
+                    <div class="map-marker" style="top: 60%; left: 60%;">
+                        <div class="marker-circle green"></div>
+                        <div class="rating">4.7<i class="fas fa-star"></i></div>
+                    </div>
+                    <div class="map-marker" style="top: 70%; left: 25%;">
+                        <div class="marker-circle lime"></div>
+                        <div class="rating">4.5<i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                
+                <div class="trail-list">
+                    <div class="trail-item">
+                        <div class="trail-rating">4.8</div>
+                        <div class="trail-details">
+                            <h4>Enchanted Forest Loop</h4>
+                            <p>A magical journey through ancient trees with AR creatures and hidden treasures.</p>
+                            <div class="trail-meta">
+                                <span class="difficulty">Medium</span>
+                                <span class="duration">45-50 min</span>
+                            </div>
+                        </div>
+                        <button class="select-trail-btn">Select</button>
+                    </div>
+                    
+                    <div class="trail-item">
+                        <div class="trail-rating">4.6</div>
+                        <div class="trail-details">
+                            <h4>Riverside Discovery</h4>
+                            <p>Learn about water life and ecosystems along the peaceful river trail.</p>
+                            <div class="trail-meta">
+                                <span class="difficulty">Easy</span>
+                                <span class="duration">30-40 min</span>
+                            </div>
+                        </div>
+                        <button class="select-trail-btn">Select</button>
+                    </div>
+                    
+                    <div class="trail-item">
+                        <div class="trail-rating">4.7</div>
+                        <div class="trail-details">
+                            <h4>Mountain View Challenge</h4>
+                            <p>A challenging hike with amazing views and exploration activities.</p>
+                            <div class="trail-meta">
+                                <span class="difficulty">Hard</span>
+                                <span class="duration">60-90 min</span>
+                            </div>
+                        </div>
+                        <button class="select-trail-btn">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button"><i class="fas fa-home"></i></button>
+                <button class="nav-button active"><i class="fas fa-map"></i></button>
+                <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-medal"></i></button>
+                <button class="nav-button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        
+        <div class="app-screen" id="history-screen" data-screen-name="Historie-/oppdrag">
+            <div class="header">
+                <div class="back-button"><i class="fas fa-arrow-left"></i></div>
+                <h2>Trail Details</h2>
+            </div>
+            <div class="content">
+                <div class="trail-info">
+                    <div class="trail-header">
+                        <div class="star-icon"><i class="fas fa-star"></i></div>
+                        <h3>Enchanted Forest Loop</h3>
+                    </div>
+                    
+                    <button class="begin-hike-btn">Begin hike <i class="fas fa-arrow-right"></i></button>
+                    
+                    <div class="info-box">
+                        <h4>Info about trail</h4>
+                        <p>This magical journey takes you through ancient trees with AR creatures and hidden treasures. Look for forest sprites hiding among the trees!</p>
+                    </div>
+                    
+                    <div class="trail-attributes">
+                        <div class="attribute">
+                            <p class="attribute-value">Medium</p>
+                            <span class="attribute-label">Difficulty</span>
+                        </div>
+                        <div class="attribute">
+                            <p class="attribute-value"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                            <span class="attribute-label">Adventure</span>
+                        </div>
+                        <div class="attribute">
+                            <p class="attribute-value"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                            <span class="attribute-label">Rewards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button"><i class="fas fa-home"></i></button>
+                <button class="nav-button"><i class="fas fa-map"></i></button>
+                <button class="nav-button active"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-cog"></i></button>
+                <button class="nav-button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        
+        <div class="app-screen" id="ar-screen" data-screen-name="AR-skjerm">
+            <div class="header">
+                <h2>AR Adventure</h2>
+                <div class="points-counter">
+                    <span>+10</span>
+                </div>
+                <div class="header-controls">
+                    <button class="control-button"><i class="fas fa-cog"></i></button>
+                    <button class="control-button"><i class="fas fa-question-circle"></i></button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="ar-notification">
+                    <div class="ar-popup">Forest Sprite Detected!</div>
+                    <div class="ar-popup rewards">+10 Points</div>
+                </div>
+
+                <div class="ar-view">
+                    <div class="ar-forest-elements">
+                        <div class="ar-tree left"></div>
+                        <div class="ar-tree right"></div>
+                        <div class="ar-tree back"></div>
+                        <div class="ar-bush left"></div>
+                        <div class="ar-bush right"></div>
+                    </div>
+                    
+                    <div class="ar-creature-container">
+                        <div class="ar-creature purple-sprite"></div>
+                    </div>
+                    
+                    <div class="ar-message">
+                        <div class="ar-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Forest Sprite Detected!</span>
+                        </div>
+                        <div class="ar-message-text">Tap to learn more</div>
+                        
+                        <div class="ar-discovery">
+                            <span>Rare Discovery</span>
+                        </div>
+                    </div>
+
+                    <div class="ar-treasure">
+                        <div class="treasure-badge">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Treasure Found!</h4>
+                        <p>You discovered a magical forest sprite hiding behind the ancient oak tree.</p>
+                        
+                        <div class="forest-sprite-info">
+                            <h5>Forest Sprite</h5>
+                            <p>These magical creatures live within the forest. Their help trees communicate with each other through underground root networks called the "wood wide web."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button"><i class="fas fa-home"></i></button>
+                <button class="nav-button"><i class="fas fa-map"></i></button>
+                <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button active"><i class="fas fa-medal"></i></button>
+                <button class="nav-button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        
+        <div class="app-screen" id="rewards-screen" data-screen-name="Belønning/Badges">
+            <div class="header">
+                <h2>Rewards</h2>
+            </div>
+            <div class="content">
+                <h3 class="leader-header">
+                    <i class="fas fa-trophy"></i> Leader board
+                </h3>
+                
+                <div class="leaderboard">
+                    <div class="leader-row">
+                        <div class="leader-place">1</div>
+                        <div class="leader-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h4>Adventure Family</h4>
+                            <p>4250p</p>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-row">
+                        <div class="leader-place">2</div>
+                        <div class="leader-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h4>Nature Lovers</h4>
+                            <p>3850p</p>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-row">
+                        <div class="leader-place">3</div>
+                        <div class="leader-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h4>The Explorers</h4>
+                            <p>3465p</p>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-row">
+                        <div class="leader-place">4</div>
+                        <div class="leader-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h4>Trail Blazers</h4>
+                            <p>2950p</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="previous-ranks-link">
+                    Previous Ranks <i class="fas fa-angle-right"></i>
+                </div>
+                
+                <h3>The family's badges</h3>
+                
+                <div class="badges-container">
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Cool badge</h4>
+                            <p>First family adventure completed!</p>
+                        </div>
+                        <div class="badge-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Cool badge</h4>
+                            <p>Discovered 5 different animal species!</p>
+                        </div>
+                        <div class="badge-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Cool badge</h4>
+                            <p>Completed 5 challenging trails</p>
+                        </div>
+                        <div class="badge-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button"><i class="fas fa-home"></i></button>
+                <button class="nav-button"><i class="fas fa-map"></i></button>
+                <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button active"><i class="fas fa-medal"></i></button>
+                <button class="nav-button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        
+        <div class="app-screen" id="profile-screen" data-screen-name="Familieprofil">
+            <div class="header">
+                <h2>Family Profile</h2>
+            </div>
+            <div class="content">
+                <div class="profile-header">
+                    <i class="fas fa-users"></i> Our Family
+                </div>
+                
+                <div class="family-card">
+                    <div class="family-info">
+                        <div class="family-avatar">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="family-name">Thompson Family</h4>
+                        <p class="family-description">4 adventurous explorers</p>
+                    </div>
+                    
+                    <div class="family-members">
+                        <div class="member">
+                            <div class="member-emoji">👩</div>
+                            <p class="member-name">Mom</p>
+                            <p class="member-level">Lvl 4</p>
+                            <p class="member-points">4050p</p>
+                        </div>
+                        <div class="member">
+                            <div class="member-emoji">👨</div>
+                            <p class="member-name">Dad</p>
+                            <p class="member-level">Lvl 3</p>
+                            <p class="member-points">3270p</p>
+                        </div>
+                        <div class="member">
+                            <div class="member-emoji">👧</div>
+                            <p class="member-name">Emma</p>
+                            <p class="member-level">Lvl 2</p>
+                            <p class="member-points">2400p</p>
+                        </div>
+                        <div class="member">
+                            <div class="member-emoji">👦</div>
+                            <p class="member-name">Sam</p>
+                            <p class="member-level">Lvl 2</p>
+                            <p class="member-points">2135p</p>
+                        </div>
+                    </div>
+                    
+                    <div class="family-status">Great Family Adventure!</div>
+                </div>
+                
+                <h3>Statistics</h3>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-circle">23</div>
+                        <p>Adventures</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-circle">60</div>
+                        <p>Hours outdoors</p>
+                    </div>
+                </div>
+                
+                <div class="stats-advanced">
+                    <div class="stat-detail">
+                        <span>45.2 km</span>
+                        <p>Distance</p>
+                    </div>
+                    <div class="stat-detail">
+                        <span>4.8</span>
+                        <p>Avg rating</p>
+                    </div>
+                </div>
+                
+                <h3>The family's badges</h3>
+                <div class="badges-list">
+                    <div class="badge-item">
+                        <div class="badge-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Cool badge</h4>
+                            <p>This badge shows that you are a true hiking expert!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button"><i class="fas fa-home"></i></button>
+                <button class="nav-button"><i class="fas fa-map"></i></button>
+                <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-medal"></i></button>
+                <button class="nav-button active"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
