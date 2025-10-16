@@ -78,6 +78,8 @@
                 <button class="nav-button active"><i class="fas fa-home"></i></button>
                 <button class="nav-button"><i class="fas fa-map"></i></button>
                 <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button"><i class="fas fa-book"></i></button>
                 <button class="nav-button"><i class="fas fa-medal"></i></button>
                 <button class="nav-button"><i class="fas fa-user"></i></button>
             </div>
@@ -163,6 +165,8 @@
                 <button class="nav-button"><i class="fas fa-home"></i></button>
                 <button class="nav-button active"><i class="fas fa-map"></i></button>
                 <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button"><i class="fas fa-book"></i></button>
                 <button class="nav-button"><i class="fas fa-medal"></i></button>
                 <button class="nav-button"><i class="fas fa-user"></i></button>
             </div>
@@ -207,7 +211,9 @@
                 <button class="nav-button"><i class="fas fa-home"></i></button>
                 <button class="nav-button"><i class="fas fa-map"></i></button>
                 <button class="nav-button active"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-cog"></i></button>
+                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button"><i class="fas fa-book"></i></button>
+                <button class="nav-button"><i class="fas fa-medal"></i></button>
                 <button class="nav-button"><i class="fas fa-user"></i></button>
             </div>
         </div>
@@ -272,16 +278,64 @@
                 <button class="nav-button"><i class="fas fa-home"></i></button>
                 <button class="nav-button"><i class="fas fa-map"></i></button>
                 <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button active"><i class="fas fa-medal"></i></button>
+                <button class="nav-button active"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button"><i class="fas fa-book"></i></button>
+                <button class="nav-button"><i class="fas fa-medal"></i></button>
                 <button class="nav-button"><i class="fas fa-user"></i></button>
             </div>
         </div>
         
-        <div class="app-screen" id="rewards-screen" data-screen-name="Belønning/Badges">
+        <div class="app-screen" id="rewards-screen" data-screen-name="Adventure Log">
             <div class="header">
-                <h2>Rewards</h2>
+                <h2>Your Adventure Log</h2>
             </div>
             <div class="content">
+                <div class="adventure-log">
+                    <div class="achievement-item unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <div class="achievement-label">Trail Blazer</div>
+                    </div>
+                    <div class="achievement-item unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <div class="achievement-label">Explorer</div>
+                    </div>
+                    <div class="achievement-item unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="achievement-label">Adventure</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-label">Locked</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-label">Locked</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="achievement-label">Locked</div>
+                    </div>
+                </div>
+
+                <div class="points-section">
+                    <h4><i class="fas fa-coins"></i> FIRNED</h4>
+                    <div class="points-display">500000</div>
+                    <div class="next-reward">NEXT REWARD AT 500 POINTS!</div>
+                    <button class="view-rewards-btn">VIEW AVAILABLE REWARDS</button>
+                </div>
+
                 <h3 class="leader-header">
                     <i class="fas fa-trophy"></i> Leader board
                 </h3>
@@ -383,6 +437,8 @@
                 <button class="nav-button"><i class="fas fa-home"></i></button>
                 <button class="nav-button"><i class="fas fa-map"></i></button>
                 <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button"><i class="fas fa-book"></i></button>
                 <button class="nav-button active"><i class="fas fa-medal"></i></button>
                 <button class="nav-button"><i class="fas fa-user"></i></button>
             </div>
@@ -476,12 +532,61 @@
                 <button class="nav-button"><i class="fas fa-home"></i></button>
                 <button class="nav-button"><i class="fas fa-map"></i></button>
                 <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button"><i class="fas fa-book"></i></button>
                 <button class="nav-button"><i class="fas fa-medal"></i></button>
                 <button class="nav-button active"><i class="fas fa-user"></i></button>
             </div>
         </div>
+        
+        <!-- Story Reading Screen -->
+        <div class="app-screen" id="story-screen" data-screen-name="Story Reading">
+            <div class="header">
+                <div class="back-button" id="story-back-btn"><i class="fas fa-arrow-left"></i></div>
+                <h2 id="story-title">Story</h2>
+                <div class="header-controls">
+                    <button class="language-toggle" id="language-toggle">🇳🇴</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="story-container">
+                    <div class="story-progress">
+                        <span class="progress-text" id="chapter-progress">Chapter 1 of 4</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="story-progress-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-content" id="story-content">
+                        <h3>Loading story...</h3>
+                        <p>Please wait while we prepare your adventure.</p>
+                    </div>
+                    
+                    <div class="story-navigation">
+                        <button class="nav-btn previous-btn" id="prev-chapter" disabled>
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <button class="nav-btn next-btn" id="next-chapter">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <button class="nav-button"><i class="fas fa-home"></i></button>
+                <button class="nav-button"><i class="fas fa-map"></i></button>
+                <button class="nav-button"><i class="fas fa-history"></i></button>
+                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
+                <button class="nav-button active"><i class="fas fa-book"></i></button>
+                <button class="nav-button"><i class="fas fa-medal"></i></button>
+                <button class="nav-button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
     </div>
     
+    <script src="js/storyManager.js"></script>
     <script src="js/app.js"></script>
+    <!-- Optional utility functions -->
+    <script src="js/demo.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "name": "trail-tale-app",
+  "version": "1.0.0",
+  "description": "Trail Tale - Interactive Hiking Adventure App",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l 8080",
+    "dev": "npx serve -s . -l 8080",
+    "serve": "npx serve -s . -l 8080"
+  },
+  "keywords": ["hiking", "trails", "adventure", "mobile-app", "demo"],
+  "author": "Trail Tale Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
