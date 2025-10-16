@@ -47,3 +47,27 @@ This is a prototype built with HTML, CSS, and JavaScript. The design is based on
 ## License
 
 This is a demo project created based on the provided screenshot.
+
+## Quick start (serve locally)
+
+You can open `index.html` directly in a browser, but it's nicer to run a small local HTTP server so relative assets and routing work correctly.
+
+- Using Node (recommended):
+
+	- If you have Node.js installed, run:
+
+		```powershell
+		npx http-server -c-1 .
+		```
+
+	- Open http://localhost:8080 in your browser.
+
+- Using Python 3 (if available):
+
+	```powershell
+	python -m http.server 8080
+	```
+
+	- Open http://localhost:8080 in your browser.
+
+Note: This is a demo/prototype. Not production-ready — the app uses static demo data and is intended for showcasing UI and interactions only.

@@ -211,5 +211,122 @@ document.addEventListener('DOMContentLoaded', function() {
             logActiveScreen();
         });
     });
+
+    // --- Demo data population (lightweight, for demo only) ---
+    const demoData = {
+        family: {
+            name: 'Thompson Family',
+            description: '4 adventurous explorers',
+            level: 8,
+            members: [
+                { emoji: '👩', name: 'Mom', level: 4, points: '4050p' },
+                { emoji: '👨', name: 'Dad', level: 3, points: '3270p' },
+                { emoji: '👧', name: 'Emma', level: 2, points: '2400p' },
+                { emoji: '👦', name: 'Sam', level: 2, points: '2135p' }
+            ]
+        },
+        trails: [
+            { title: 'Enchanted Forest Loop', rating: '4.8', difficulty: 'Medium', duration: '45-50 min', description: 'A magical journey through ancient trees with AR creatures and hidden treasures.' },
+            { title: 'Riverside Discovery', rating: '4.6', difficulty: 'Easy', duration: '30-40 min', description: 'Learn about water life and ecosystems along the peaceful river trail.' },
+            { title: 'Mountain View Challenge', rating: '4.7', difficulty: 'Hard', duration: '60-90 min', description: 'A challenging hike with amazing views and exploration activities.' }
+        ],
+        badges: [
+            { icon: 'fas fa-leaf', title: 'First Adventure', text: 'First family adventure completed!' },
+            { icon: 'fas fa-paw', title: 'Discoverer', text: 'Discovered 5 different animal species!' },
+            { icon: 'fas fa-hiking', title: 'Trail Master', text: 'Completed 5 challenging trails' }
+        ],
+        leaderboard: [
+            { place: 1, name: 'Adventure Family', points: '4250p', icon: 'fas fa-mountain' },
+            { place: 2, name: 'Nature Lovers', points: '3850p', icon: 'fas fa-tree' },
+            { place: 3, name: 'The Explorers', points: '3465p', icon: 'fas fa-book' }
+        ]
+    };
+
+    function populateDemoData() {
+        // Family header
+        const familyNameEl = document.querySelector('.family-name');
+        const familyDescEl = document.querySelector('.family-description');
+        const levelNumberEl = document.querySelector('.level-number');
+
+        if (familyNameEl) familyNameEl.textContent = demoData.family.name;
+        if (familyDescEl) familyDescEl.textContent = demoData.family.description;
+        if (levelNumberEl) levelNumberEl.textContent = demoData.family.level;
+
+        // Family members
+        const memberEls = document.querySelectorAll('.family-members .member');
+        memberEls.forEach((el, idx) => {
+            const member = demoData.family.members[idx];
+            if (!member) return;
+            const emoji = el.querySelector('.member-emoji');
+            const name = el.querySelector('.member-name');
+            const lvl = el.querySelector('.member-level');
+            const pts = el.querySelector('.member-points');
+            if (emoji) emoji.textContent = member.emoji;
+            if (name) name.textContent = member.name;
+            if (lvl) lvl.textContent = `Lvl ${member.level}`;
+            if (pts) pts.textContent = member.points;
+        });
+
+        // Trails list (replace existing .trail-list contents)
+        const trailList = document.querySelector('.trail-list');
+        if (trailList) {
+            trailList.innerHTML = '';
+            demoData.trails.forEach(trail => {
+                const div = document.createElement('div');
+                div.className = 'trail-item';
+                div.innerHTML = `
+                    <div class="trail-rating">${trail.rating}</div>
+                    <div class="trail-details">
+                        <h4>${trail.title}</h4>
+                        <p>${trail.description}</p>
+                        <div class="trail-meta">
+                            <span class="difficulty">${trail.difficulty}</span>
+                            <span class="duration">${trail.duration}</span>
+                        </div>
+                    </div>
+                    <button class="select-trail-btn">Select</button>
+                `.trim();
+                trailList.appendChild(div);
+            });
+        }
+
+        // Badges
+        const badgesContainer = document.querySelector('.badges-container');
+        if (badgesContainer) {
+            badgesContainer.innerHTML = '';
+            demoData.badges.forEach(b => {
+                const card = document.createElement('div');
+                card.className = 'badge-card';
+                card.innerHTML = `
+                    <div class="badge-icon"><i class="${b.icon}"></i></div>
+                    <div class="badge-info">
+                        <h4>${b.title}</h4>
+                        <p>${b.text}</p>
+                    </div>
+                    <div class="badge-check"><i class="fas fa-check-circle"></i></div>
+                `.trim();
+                badgesContainer.appendChild(card);
+            });
+        }
+
+        // Leaderboard
+        const leaderboardEl = document.querySelector('.leaderboard');
+        if (leaderboardEl) {
+            leaderboardEl.innerHTML = '';
+            demoData.leaderboard.forEach(row => {
+                const r = document.createElement('div');
+                r.className = 'leader-row';
+                r.innerHTML = `
+                    <div class="leader-place">${row.place}</div>
+                    <div class="leader-icon"><i class="${row.icon}"></i></div>
+                    <div class="leader-info"><h4>${row.name}</h4><p>${row.points}</p></div>
+                `.trim();
+                leaderboardEl.appendChild(r);
+            });
+        }
+    }
+
+    // Populate demo data once DOM is ready
+    populateDemoData();
 });
 console.log('Starting app with all screens visible for display purposes...'); document.addEventListener('DOMContentLoaded', function() { document.querySelectorAll('.app-screen').forEach(screen => screen.classList.add('active')); });
