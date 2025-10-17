@@ -3,590 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiking Trail App</title>
+    <title>Trail Tale - Mobile Hiking App Wireframes</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Mobile App Wireframes Container -->
     <div class="mobile-container">
-        <div class="app-screen" id="home-screen" data-screen-name="Hjemskjerm">
-            <div class="header">
-                <h2>Trail Tale</h2>
+        
+        <!-- Home Screen Wireframe -->
+        <div class="app-screen" id="home">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
             </div>
-            <div class="content">
-                <h3>Hey family!</h3>
-                <div class="level-badge">
-                    <div class="level-display">
-                        <h4>Level</h4>
-                        <div class="level-number">8</div>
-                    </div>
-                    <div class="badge-progress">
-                        <p>Last badge and next badge</p>
-                        <div class="badge-icons">
-                            <div class="badge-icon">
-                                <i class="fas fa-star"></i>
-                                <span class="badge-name">Nature Detective</span>
-                            </div>
-                            <div class="badge-arrow"><i class="fas fa-arrow-right"></i></div>
-                            <div class="badge-icon">
-                                <i class="fas fa-star"></i>
-                                <span class="badge-name">Trail Master</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="next-hike">
-                    <h4>Your next hike?</h4>
-                    <div class="hike-options">
-                        <div class="hike-option">
-                            <div class="hike-icon"><i class="fas fa-tree"></i></div>
-                            <div class="hike-details">
-                                <h5>Enchanted Forest Loop</h5>
-                                <div class="hike-meta">
-                                    <span class="difficulty">Medium</span>
-                                    <span class="duration">45 min</span>
-                                </div>
-                            </div>
-                            <div class="hike-arrow"><i class="fas fa-chevron-right"></i></div>
-                        </div>
-                        <div class="hike-option">
-                            <div class="hike-icon"><i class="fas fa-water"></i></div>
-                            <div class="hike-details">
-                                <h5>Riverside Discovery</h5>
-                                <div class="hike-meta">
-                                    <span class="difficulty">Easy</span>
-                                    <span class="duration">30 min</span>
-                                </div>
-                            </div>
-                            <div class="hike-arrow"><i class="fas fa-chevron-right"></i></div>
-                        </div>
-                        <div class="hike-option">
-                            <div class="hike-icon"><i class="fas fa-mountain"></i></div>
-                            <div class="hike-details">
-                                <h5>Mountain View Trail</h5>
-                                <div class="hike-meta">
-                                    <span class="difficulty">Hard</span>
-                                    <span class="duration">90 min</span>
-                                </div>
-                            </div>
-                            <div class="hike-arrow"><i class="fas fa-chevron-right"></i></div>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="screen-header">
+                <h1 class="screen-title">Trail Tale</h1>
             </div>
-            <div class="nav-bar">
-                <button class="nav-button active"><i class="fas fa-home"></i></button>
-                <button class="nav-button"><i class="fas fa-map"></i></button>
-                <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button"><i class="fas fa-book"></i></button>
-                <button class="nav-button"><i class="fas fa-medal"></i></button>
-                <button class="nav-button"><i class="fas fa-user"></i></button>
+            
+            <div class="screen-content">
+                <!-- Content will be dynamically rendered by app.js -->
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item active" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
             </div>
         </div>
-        
-        <div class="app-screen" id="map-screen" data-screen-name="Kart/AR-skjerm">
-            <div class="header">
-                <h2>Map</h2>
+
+        <!-- Map Screen Wireframe -->
+        <div class="app-screen" id="map">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
             </div>
-            <div class="content">
-                <div class="map-container">
-                    <div class="map-image">
-                        <div class="map-mountains">
-                            <div class="mountain-icon"></div>
-                        </div>
-                        <div class="map-forest">
-                            <div class="tree-icon"></div>
-                            <div class="tree-icon"></div>
-                            <div class="tree-icon"></div>
-                        </div>
-                    </div>
-                    <div class="map-trail"></div>
-                    <div class="map-marker" style="top: 30%; left: 30%;">
-                        <div class="marker-circle purple"></div>
-                        <div class="rating">4.8<i class="fas fa-star"></i></div>
-                    </div>
-                    <div class="map-marker" style="top: 40%; left: 40%;">
-                        <div class="marker-circle blue"></div>
-                        <div class="rating">4.6<i class="fas fa-star"></i></div>
-                    </div>
-                    <div class="map-marker" style="top: 60%; left: 60%;">
-                        <div class="marker-circle green"></div>
-                        <div class="rating">4.7<i class="fas fa-star"></i></div>
-                    </div>
-                    <div class="map-marker" style="top: 70%; left: 25%;">
-                        <div class="marker-circle lime"></div>
-                        <div class="rating">4.5<i class="fas fa-star"></i></div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">Trail Map</h1>
+            </div>
+            
+            <div class="screen-content">
+                <!-- Content will be dynamically rendered by app.js -->
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item active" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Screen Wireframe -->
+        <div class="app-screen" id="history">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
+            </div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">Trail History</h1>
+            </div>
+            
+            <div class="screen-content">
+                <!-- Content will be dynamically rendered by app.js -->
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item active" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AR Screen Wireframe -->
+        <div class="app-screen" id="ar">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
+            </div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">AR Mode</h1>
+            </div>
+            
+            <div class="screen-content">
+                <!-- Content will be dynamically rendered by app.js -->
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item active" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rewards/Leaderboard Screen Wireframe -->
+        <div class="app-screen" id="rewards">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
+            </div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">Rewards & Badges</h1>
+            </div>
+            
+            <div class="screen-content">
+                <!-- Content will be dynamically rendered by app.js -->
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item active" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Screen Wireframe -->
+        <div class="app-screen" id="profile">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
+            </div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">Family Profile</h1>
+            </div>
+            
+            <div class="screen-content">
+                <!-- Content will be dynamically rendered by app.js -->
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item active" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Mode Screen Wireframe -->
+        <div class="app-screen" id="story">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
+            </div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">Story Mode</h1>
+            </div>
+            
+            <div class="screen-content">
+                <div class="story-content">
+                    <h3 class="story-title">The Forest Adventure Begins</h3>
+                    <p class="story-text">
+                        As you step onto the forest trail, the morning mist swirls around ancient oak trees. 
+                        The path ahead splits into three directions, each leading to a different adventure. 
+                        Your family gathers around you, excitement building for the journey ahead.
+                    </p>
+                    
+                    <div class="story-choices">
+                        <button class="choice-btn">
+                            🌲 Take the left path through the dense woodland
+                        </button>
+                        <button class="choice-btn">
+                            🏞️ Follow the middle path along the stream
+                        </button>
+                        <button class="choice-btn">
+                            ⛰️ Choose the right path up the rocky hill
+                        </button>
                     </div>
                 </div>
                 
-                <div class="trail-list">
-                    <div class="trail-item">
-                        <div class="trail-rating">4.8</div>
-                        <div class="trail-details">
-                            <h4>Enchanted Forest Loop</h4>
-                            <p>A magical journey through ancient trees with AR creatures and hidden treasures.</p>
-                            <div class="trail-meta">
-                                <span class="difficulty">Medium</span>
-                                <span class="duration">45-50 min</span>
-                            </div>
-                        </div>
-                        <button class="select-trail-btn">Select</button>
+                <div class="story-progress">
+                    <div class="progress-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    
-                    <div class="trail-item">
-                        <div class="trail-rating">4.6</div>
-                        <div class="trail-details">
-                            <h4>Riverside Discovery</h4>
-                            <p>Learn about water life and ecosystems along the peaceful river trail.</p>
-                            <div class="trail-meta">
-                                <span class="difficulty">Easy</span>
-                                <span class="duration">30-40 min</span>
-                            </div>
-                        </div>
-                        <button class="select-trail-btn">Select</button>
-                    </div>
-                    
-                    <div class="trail-item">
-                        <div class="trail-rating">4.7</div>
-                        <div class="trail-details">
-                            <h4>Mountain View Challenge</h4>
-                            <p>A challenging hike with amazing views and exploration activities.</p>
-                            <div class="trail-meta">
-                                <span class="difficulty">Hard</span>
-                                <span class="duration">60-90 min</span>
-                            </div>
-                        </div>
-                        <button class="select-trail-btn">Select</button>
-                    </div>
+                    <p class="progress-text">Chapter 1 of 5</p>
                 </div>
             </div>
-            <div class="nav-bar">
-                <button class="nav-button"><i class="fas fa-home"></i></button>
-                <button class="nav-button active"><i class="fas fa-map"></i></button>
-                <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button"><i class="fas fa-book"></i></button>
-                <button class="nav-button"><i class="fas fa-medal"></i></button>
-                <button class="nav-button"><i class="fas fa-user"></i></button>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
             </div>
         </div>
-        
-        <div class="app-screen" id="history-screen" data-screen-name="Historie-/oppdrag">
-            <div class="header">
-                <div class="back-button"><i class="fas fa-arrow-left"></i></div>
-                <h2>Trail Details</h2>
-            </div>
-            <div class="content">
-                <div class="trail-info">
-                    <div class="trail-header">
-                        <div class="star-icon"><i class="fas fa-star"></i></div>
-                        <h3>Enchanted Forest Loop</h3>
-                    </div>
-                    
-                    <button class="begin-hike-btn">Begin hike <i class="fas fa-arrow-right"></i></button>
-                    
-                    <div class="info-box">
-                        <h4>Info about trail</h4>
-                        <p>This magical journey takes you through ancient trees with AR creatures and hidden treasures. Look for forest sprites hiding among the trees!</p>
-                    </div>
-                    
-                    <div class="trail-attributes">
-                        <div class="attribute">
-                            <p class="attribute-value">Medium</p>
-                            <span class="attribute-label">Difficulty</span>
-                        </div>
-                        <div class="attribute">
-                            <p class="attribute-value"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            <span class="attribute-label">Adventure</span>
-                        </div>
-                        <div class="attribute">
-                            <p class="attribute-value"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            <span class="attribute-label">Rewards</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <button class="nav-button"><i class="fas fa-home"></i></button>
-                <button class="nav-button"><i class="fas fa-map"></i></button>
-                <button class="nav-button active"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button"><i class="fas fa-book"></i></button>
-                <button class="nav-button"><i class="fas fa-medal"></i></button>
-                <button class="nav-button"><i class="fas fa-user"></i></button>
-            </div>
-        </div>
-        
-        <div class="app-screen" id="ar-screen" data-screen-name="AR-skjerm">
-            <div class="header">
-                <h2>AR Adventure</h2>
-                <div class="points-counter">
-                    <span>+10</span>
-                </div>
-                <div class="header-controls">
-                    <button class="control-button"><i class="fas fa-cog"></i></button>
-                    <button class="control-button"><i class="fas fa-question-circle"></i></button>
-                </div>
-            </div>
-            <div class="content">
-                <div class="ar-notification">
-                    <div class="ar-popup">Forest Sprite Detected!</div>
-                    <div class="ar-popup rewards">+10 Points</div>
-                </div>
 
+        <!-- AR Quest Screen Wireframe -->
+        <div class="app-screen" id="ar-quest">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>🔋 100%</span>
+            </div>
+            
+            <div class="screen-header">
+                <button class="back-btn">←</button>
+                <h1 class="screen-title">AR Quest Active</h1>
+            </div>
+            
+            <div class="screen-content">
                 <div class="ar-view">
-                    <div class="ar-forest-elements">
-                        <div class="ar-tree left"></div>
-                        <div class="ar-tree right"></div>
-                        <div class="ar-tree back"></div>
-                        <div class="ar-bush left"></div>
-                        <div class="ar-bush right"></div>
+                    <div class="ar-overlay">
+                        <div class="ar-target">📍</div>
+                        <div class="ar-instruction">Point camera at trail marker</div>
+                        <div class="ar-hint">Look for QR codes on trees and rocks</div>
                     </div>
                     
-                    <div class="ar-creature-container">
-                        <div class="ar-creature purple-sprite"></div>
+                    <div class="ar-controls">
+                        <button class="ar-btn scan-btn">📸 Scan</button>
+                        <button class="ar-btn hint-btn">💡 Hint</button>
+                        <button class="ar-btn map-btn">🗺️ Map</button>
+                    </div>
+                </div>
+                
+                <div class="quest-status">
+                    <h4>Forest Discovery Quest</h4>
+                    <div class="quest-objectives">
+                        <div class="objective completed">✅ Find the ancient oak marker</div>
+                        <div class="objective completed">✅ Scan the wildlife information sign</div>
+                        <div class="objective active">🔍 Locate the hidden fairy door</div>
+                        <div class="objective locked">🔒 Discover the secret waterfall</div>
+                        <div class="objective locked">🔒 Complete the nature quiz</div>
                     </div>
                     
-                    <div class="ar-message">
-                        <div class="ar-badge">
-                            <i class="fas fa-star"></i>
-                            <span>Forest Sprite Detected!</span>
-                        </div>
-                        <div class="ar-message-text">Tap to learn more</div>
-                        
-                        <div class="ar-discovery">
-                            <span>Rare Discovery</span>
-                        </div>
+                    <div class="quest-progress">
+                        <div class="progress-bar" style="width: 40%;"></div>
                     </div>
+                    <p class="progress-text">2 of 5 objectives completed</p>
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item" data-screen="home">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-screen="map">
+                    <div class="nav-icon">🗺️</div>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item" data-screen="history">
+                    <div class="nav-icon">📊</div>
+                    <span>History</span>
+                </div>
+                <div class="nav-item active" data-screen="ar">
+                    <div class="nav-icon">📱</div>
+                    <span>AR</span>
+                </div>
+                <div class="nav-item" data-screen="rewards">
+                    <div class="nav-icon">🏆</div>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" data-screen="profile">
+                    <div class="nav-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
 
-                    <div class="ar-treasure">
-                        <div class="treasure-badge">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h4>Treasure Found!</h4>
-                        <p>You discovered a magical forest sprite hiding behind the ancient oak tree.</p>
-                        
-                        <div class="forest-sprite-info">
-                            <h5>Forest Sprite</h5>
-                            <p>These magical creatures live within the forest. Their help trees communicate with each other through underground root networks called the "wood wide web."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <button class="nav-button"><i class="fas fa-home"></i></button>
-                <button class="nav-button"><i class="fas fa-map"></i></button>
-                <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button active"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button"><i class="fas fa-book"></i></button>
-                <button class="nav-button"><i class="fas fa-medal"></i></button>
-                <button class="nav-button"><i class="fas fa-user"></i></button>
-            </div>
-        </div>
-        
-        <div class="app-screen" id="rewards-screen" data-screen-name="Adventure Log">
-            <div class="header">
-                <h2>Your Adventure Log</h2>
-            </div>
-            <div class="content">
-                <div class="adventure-log">
-                    <div class="achievement-item unlocked">
-                        <div class="achievement-icon">
-                            <i class="fas fa-hiking"></i>
-                        </div>
-                        <div class="achievement-label">Trail Blazer</div>
-                    </div>
-                    <div class="achievement-item unlocked">
-                        <div class="achievement-icon">
-                            <i class="fas fa-compass"></i>
-                        </div>
-                        <div class="achievement-label">Explorer</div>
-                    </div>
-                    <div class="achievement-item unlocked">
-                        <div class="achievement-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="achievement-label">Adventure</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="achievement-label">Locked</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="achievement-label">Locked</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <div class="achievement-label">Locked</div>
-                    </div>
-                </div>
-
-                <div class="points-section">
-                    <h4><i class="fas fa-coins"></i> FIRNED</h4>
-                    <div class="points-display">500000</div>
-                    <div class="next-reward">NEXT REWARD AT 500 POINTS!</div>
-                    <button class="view-rewards-btn">VIEW AVAILABLE REWARDS</button>
-                </div>
-
-                <h3 class="leader-header">
-                    <i class="fas fa-trophy"></i> Leader board
-                </h3>
-                
-                <div class="leaderboard">
-                    <div class="leader-row">
-                        <div class="leader-place">1</div>
-                        <div class="leader-icon">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h4>Adventure Family</h4>
-                            <p>4250p</p>
-                        </div>
-                    </div>
-                    
-                    <div class="leader-row">
-                        <div class="leader-place">2</div>
-                        <div class="leader-icon">
-                            <i class="fas fa-tree"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h4>Nature Lovers</h4>
-                            <p>3850p</p>
-                        </div>
-                    </div>
-                    
-                    <div class="leader-row">
-                        <div class="leader-place">3</div>
-                        <div class="leader-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h4>The Explorers</h4>
-                            <p>3465p</p>
-                        </div>
-                    </div>
-                    
-                    <div class="leader-row">
-                        <div class="leader-place">4</div>
-                        <div class="leader-icon">
-                            <i class="fas fa-hiking"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h4>Trail Blazers</h4>
-                            <p>2950p</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="previous-ranks-link">
-                    Previous Ranks <i class="fas fa-angle-right"></i>
-                </div>
-                
-                <h3>The family's badges</h3>
-                
-                <div class="badges-container">
-                    <div class="badge-card">
-                        <div class="badge-icon">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <div class="badge-info">
-                            <h4>Cool badge</h4>
-                            <p>First family adventure completed!</p>
-                        </div>
-                        <div class="badge-check">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="badge-card">
-                        <div class="badge-icon">
-                            <i class="fas fa-paw"></i>
-                        </div>
-                        <div class="badge-info">
-                            <h4>Cool badge</h4>
-                            <p>Discovered 5 different animal species!</p>
-                        </div>
-                        <div class="badge-check">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="badge-card">
-                        <div class="badge-icon">
-                            <i class="fas fa-hiking"></i>
-                        </div>
-                        <div class="badge-info">
-                            <h4>Cool badge</h4>
-                            <p>Completed 5 challenging trails</p>
-                        </div>
-                        <div class="badge-check">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <button class="nav-button"><i class="fas fa-home"></i></button>
-                <button class="nav-button"><i class="fas fa-map"></i></button>
-                <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button"><i class="fas fa-book"></i></button>
-                <button class="nav-button active"><i class="fas fa-medal"></i></button>
-                <button class="nav-button"><i class="fas fa-user"></i></button>
-            </div>
-        </div>
-        
-        <div class="app-screen" id="profile-screen" data-screen-name="Familieprofil">
-            <div class="header">
-                <h2>Family Profile</h2>
-            </div>
-            <div class="content">
-                <div class="profile-header">
-                    <i class="fas fa-users"></i> Our Family
-                </div>
-                
-                <div class="family-card">
-                    <div class="family-info">
-                        <div class="family-avatar">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4 class="family-name">Thompson Family</h4>
-                        <p class="family-description">4 adventurous explorers</p>
-                    </div>
-                    
-                    <div class="family-members">
-                        <div class="member">
-                            <div class="member-emoji">👩</div>
-                            <p class="member-name">Mom</p>
-                            <p class="member-level">Lvl 4</p>
-                            <p class="member-points">4050p</p>
-                        </div>
-                        <div class="member">
-                            <div class="member-emoji">👨</div>
-                            <p class="member-name">Dad</p>
-                            <p class="member-level">Lvl 3</p>
-                            <p class="member-points">3270p</p>
-                        </div>
-                        <div class="member">
-                            <div class="member-emoji">👧</div>
-                            <p class="member-name">Emma</p>
-                            <p class="member-level">Lvl 2</p>
-                            <p class="member-points">2400p</p>
-                        </div>
-                        <div class="member">
-                            <div class="member-emoji">👦</div>
-                            <p class="member-name">Sam</p>
-                            <p class="member-level">Lvl 2</p>
-                            <p class="member-points">2135p</p>
-                        </div>
-                    </div>
-                    
-                    <div class="family-status">Great Family Adventure!</div>
-                </div>
-                
-                <h3>Statistics</h3>
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <div class="stat-circle">23</div>
-                        <p>Adventures</p>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-circle">60</div>
-                        <p>Hours outdoors</p>
-                    </div>
-                </div>
-                
-                <div class="stats-advanced">
-                    <div class="stat-detail">
-                        <span>45.2 km</span>
-                        <p>Distance</p>
-                    </div>
-                    <div class="stat-detail">
-                        <span>4.8</span>
-                        <p>Avg rating</p>
-                    </div>
-                </div>
-                
-                <h3>The family's badges</h3>
-                <div class="badges-list">
-                    <div class="badge-item">
-                        <div class="badge-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="badge-info">
-                            <h4>Cool badge</h4>
-                            <p>This badge shows that you are a true hiking expert!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <button class="nav-button"><i class="fas fa-home"></i></button>
-                <button class="nav-button"><i class="fas fa-map"></i></button>
-                <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button"><i class="fas fa-book"></i></button>
-                <button class="nav-button"><i class="fas fa-medal"></i></button>
-                <button class="nav-button active"><i class="fas fa-user"></i></button>
-            </div>
-        </div>
-        
-        <!-- Story Reading Screen -->
-        <div class="app-screen" id="story-screen" data-screen-name="Story Reading">
-            <div class="header">
-                <div class="back-button" id="story-back-btn"><i class="fas fa-arrow-left"></i></div>
-                <h2 id="story-title">Story</h2>
-                <div class="header-controls">
-                    <button class="language-toggle" id="language-toggle">🇳🇴</button>
-                </div>
-            </div>
-            <div class="content">
-                <div class="story-container">
-                    <div class="story-progress">
-                        <span class="progress-text" id="chapter-progress">Chapter 1 of 4</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="story-progress-bar"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="story-content" id="story-content">
-                        <h3>Loading story...</h3>
-                        <p>Please wait while we prepare your adventure.</p>
-                    </div>
-                    
-                    <div class="story-navigation">
-                        <button class="nav-btn previous-btn" id="prev-chapter" disabled>
-                            <i class="fas fa-chevron-left"></i> Previous
-                        </button>
-                        <button class="nav-btn next-btn" id="next-chapter">
-                            Next <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <button class="nav-button"><i class="fas fa-home"></i></button>
-                <button class="nav-button"><i class="fas fa-map"></i></button>
-                <button class="nav-button"><i class="fas fa-history"></i></button>
-                <button class="nav-button"><i class="fas fa-vr-cardboard"></i></button>
-                <button class="nav-button active"><i class="fas fa-book"></i></button>
-                <button class="nav-button"><i class="fas fa-medal"></i></button>
-                <button class="nav-button"><i class="fas fa-user"></i></button>
-            </div>
-        </div>
     </div>
-    
-    <script src="js/storyManager.js"></script>
+
+    <!-- Scripts -->
     <script src="js/app.js"></script>
-    <!-- Optional utility functions -->
-    <script src="js/demo.js"></script>
+    <script src="js/interactivity.js"></script>
 </body>
 </html>
